@@ -7,7 +7,7 @@ class PubTest < MiniTest::Test
   def setup
   @beer = Drink.new("beer", 3)
   @vodka = Drink.new("vodka", 2.5)
-  @Chanter = Pub.new("Chanter", 50, [@beer, @vodka])
+  @chanter = Pub.new("Chanter", 50, [@beer, @vodka])
 
   end
 
@@ -22,4 +22,4 @@ class PubTest < MiniTest::Test
 
 
 
-end  
+end

@@ -18,6 +18,12 @@ attr_reader :wallet
       return false
     end
 
+    def can_afford_to_buy_drink?(drink)
+      return true if @wallet > drink.price
+    end
+
+
+
 
 
 
