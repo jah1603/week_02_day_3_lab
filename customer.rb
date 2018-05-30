@@ -42,6 +42,10 @@ attr_reader :wallet, :age, :drunkenness
       drunkenness_increases(drink)
     end
 
+    def buy_food(pub, food)
+      return @drunkenness -= food.rejuvenation_level
+    end
+
 
 
 

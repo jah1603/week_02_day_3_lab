@@ -2,6 +2,7 @@ require ("minitest/autorun")
 require_relative ("../customer.rb")
 require_relative ("../pub.rb")
 require_relative ("../drink.rb")
+require_relative ("../food.rb")
 require ("minitest/rg")
 
 class CustomerTest < MiniTest::Test
@@ -12,6 +13,8 @@ class CustomerTest < MiniTest::Test
     @beer = Drink.new("beer", 3, 1.5)
     @lee = Customer.new("Lee", 15, 60, 10)
     @james = Customer.new("James", 20, 17, 6)
+    @crisps = Food.new("Ready salted", 1, 2)
+    @kebab = Food.new("Donner kebab", 2.75, 5)
   end
 
 
@@ -49,6 +52,12 @@ class CustomerTest < MiniTest::Test
   def test_check_drunkenness
     assert_equal(10, @lee.check_drunkenness())
   end
+
+  def test_buy_food
+    @james.buy_food(@chanter, @kebab)
+    assert_equal(1, @james.check_drunkenness())
+  end
+
 
 
 
