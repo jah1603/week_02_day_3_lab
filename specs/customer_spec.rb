@@ -30,6 +30,11 @@ class CustomerTest < MiniTest::Test
     assert_equal(true, @james.can_afford_to_buy_drink?(@vodka))
   end
 
+  def test_can_afford_to_buy_drink
+    assert_equal(47.5,  )
+
+  end
+
 
 
 

@@ -7,7 +7,9 @@ class Pub
   end
 
 
-
+  def take_money(drink)
+    return @till + drink.get_drink_price
+  end
 
 
 

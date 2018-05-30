@@ -9,7 +9,9 @@ class Drink
 
 
 
-
+  def get_drink_price
+    return @price
+  end
 
 
 

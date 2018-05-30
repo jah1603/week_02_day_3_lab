@@ -1,5 +1,7 @@
 require ("minitest/autorun")
 require_relative ("../pub.rb")
+require_relative ("../drink.rb")
+
 require ("minitest/rg")
 
 class PubTest < MiniTest::Test
@@ -11,6 +13,10 @@ class PubTest < MiniTest::Test
 
   end
 
+
+  def test_buy_drink__till_value_increases
+    assert_equal(52.5, @chanter.take_money(@vodka) )
+  end
 
 
 
