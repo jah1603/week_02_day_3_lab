@@ -22,6 +22,10 @@ attr_reader :wallet
       return true if @wallet > drink.price
     end
 
+    def spend_money_on_drink(drink)
+      @wallet - drink.get_drink_price
+    end
+
 
 
 

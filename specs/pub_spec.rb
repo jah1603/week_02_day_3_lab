@@ -18,6 +18,8 @@ class PubTest < MiniTest::Test
     assert_equal(52.5, @chanter.take_money(@vodka) )
   end
 
+  
+
 
 
 
