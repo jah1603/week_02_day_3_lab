@@ -26,6 +26,13 @@ attr_reader :wallet
       @wallet - drink.get_drink_price
     end
 
+    def buy_drink(pub, drink)
+      spend_money_on_drink(drink)
+      pub.take_money(drink)
+    end
+
+
+
 
 
 

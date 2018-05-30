@@ -34,6 +34,12 @@ class CustomerTest < MiniTest::Test
     assert_equal(17.5, @james.spend_money_on_drink(@vodka))
   end
 
+  def test_drink_sale
+    @lee.buy_drink(@chanter, @beer)
+      assert_equal(12, @lee.spend_money_on_drink(@beer))
+      assert_equal(53, @chanter.take_money(@beer))
+  end
+
 
 
 
