@@ -11,7 +11,7 @@ class PubTest < MiniTest::Test
   def setup
   @beer = Drink.new("beer", 3, 1.5)
   @vodka = Drink.new("vodka", 2.5, 3)
-  @chanter = Pub.new("Chanter", 50, [@beer, @vodka])
+  @chanter = Pub.new("Chanter", 50, {@beer => 10, @vodka => 25})
   @lee = Customer.new("Lee", 15, 60, 10)
   @james = Customer.new("James", 20, 17, 6)
   @crisps = Food.new("Ready salted", 1, 2)
@@ -35,6 +35,10 @@ class PubTest < MiniTest::Test
   def test_should_serve__drunk?
     @lee.buy_drink(@chanter, @vodka)
     assert_equal(false, @chanter.should_serve?(@lee))
+  end
+
+  def test_check_stock_level
+    assert_equal(25, @chanter.check_stock_level(@vodka))
   end
 
 

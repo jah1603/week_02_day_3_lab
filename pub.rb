@@ -1,9 +1,9 @@
 class Pub
 
-  def initialize(name, till, drinks)
+  def initialize(name, till, stock)
     @name = name
     @till = till
-    @drinks = drinks
+    @stock = stock
   end
 
 
@@ -18,10 +18,12 @@ class Pub
 
   def should_serve?(person)
     return false if person.check_drunkenness > 12
-  else true
+  else return true
   end
 
-
+  def check_stock_level(drink)
+    @stock[drink]
+  end
 
 
 
