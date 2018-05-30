@@ -25,11 +25,14 @@ class Pub
     @stock[drink]
   end
 
-
-
-
-
-
-
+  def check_total_stock_value()
+    stock_array = for drink in @stock
+      return @stock[drink]
+    end
+    stock_array_two = for number in stock_array
+      number * price
+    end
+    stock_value = stock_array_two[1] + stock_array_two[2]
+  end
 
 end

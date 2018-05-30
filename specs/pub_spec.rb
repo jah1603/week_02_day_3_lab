@@ -41,15 +41,9 @@ class PubTest < MiniTest::Test
     assert_equal(25, @chanter.check_stock_level(@vodka))
   end
 
-
-
-
-
-
-
-
-
-
+  def test_check_total_stock_value
+    assert_equal(92.5, check_total_stock_value())
+  end
 
 
 
