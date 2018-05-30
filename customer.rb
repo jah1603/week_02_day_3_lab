@@ -1,10 +1,11 @@
 class Customer
 
-attr_reader :wallet
+attr_reader :wallet, :age
 
-  def initialize(name, wallet)
+  def initialize(name, wallet, age)
     @name = name
     @wallet = wallet
+    @age = age
   end
 
   def get_wallet_value()

@@ -10,8 +10,8 @@ class CustomerTest < MiniTest::Test
     @chanter = Pub.new("Chanter", 50, [@beer, @vodka])
     @vodka = Drink.new("vodka", 2.5)
     @beer = Drink.new("beer", 3)
-    @lee = Customer.new("Lee", 15)
-    @james = Customer.new("James", 20)
+    @lee = Customer.new("Lee", 15, 60)
+    @james = Customer.new("James", 20, 17)
   end
 
 

@@ -11,6 +11,10 @@ class Pub
     return @till + drink.get_drink_price
   end
 
+  def is_old_enough?(customer)
+    return true if customer.age >= 18
+  else return false
+  end
 
 
 
