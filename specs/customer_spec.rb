@@ -14,13 +14,13 @@ class CustomerTest < MiniTest::Test
     result = @lee.get_wallet_value
     assert_equal(15, result)
   end
-  #
-  # def test_wallet_not_empty
-  #   assert_greater_than(0, @wallet)
-  #
-  # end
-  #
-  #
+
+  def test_wallet_not_empty
+    result = @lee.wallet_not_empty?
+    assert_equal(true, result)
+  end
+
+
 
 
 

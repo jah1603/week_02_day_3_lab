@@ -12,6 +12,12 @@ attr_reader :wallet
     end
 
 
+    def wallet_not_empty?()
+      return true if @wallet > 0
+    else
+      return false
+    end
+
 
 
 
