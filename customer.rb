@@ -7,7 +7,9 @@ attr_reader :wallet
     @wallet = wallet
   end
 
-
+  def get_wallet_value()
+    return @wallet
+    end
 
 
 
