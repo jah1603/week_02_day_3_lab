@@ -16,6 +16,10 @@ class Pub
   else return false
   end
 
+  def should_serve?(person)
+    return false if person.check_drunkenness > 12
+  else true
+  end
 
 
 

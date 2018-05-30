@@ -8,11 +8,11 @@ require ("minitest/rg")
 class PubTest < MiniTest::Test
 
   def setup
-  @beer = Drink.new("beer", 3)
-  @vodka = Drink.new("vodka", 2.5)
+  @beer = Drink.new("beer", 3, 1.5)
+  @vodka = Drink.new("vodka", 2.5, 3)
   @chanter = Pub.new("Chanter", 50, [@beer, @vodka])
-  @lee = Customer.new("Lee", 15, 60)
-  @james = Customer.new("James", 20, 17)
+  @lee = Customer.new("Lee", 15, 60, 10)
+  @james = Customer.new("James", 20, 17, 6)
   end
 
 
@@ -20,9 +20,20 @@ class PubTest < MiniTest::Test
     assert_equal(52.5, @chanter.take_money(@vodka) )
   end
 
-  def test_should_serve?
+  def test_should_serve__age?
     assert_equal(true, @chanter.is_old_enough?(@lee))
   end
+
+  def test_should_serve__sober?
+    @lee.buy_drink(@chanter, @beer)
+    assert_equal(true, @chanter.should_serve?(@lee))
+  end
+
+  def test_should_serve__drunk?
+    @lee.buy_drink(@chanter, @vodka)
+    assert_equal(false, @chanter.should_serve?(@lee))
+  end
+
 
 
 
